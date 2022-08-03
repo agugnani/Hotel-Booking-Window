@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Airbnb</title>
+</head>
+
+<body>
+  <main class="wrapper margin-auto">
+
+    <div class="flex justify-between">
+
+      <p>
+        <span class="bold">₹7047 </span>night
+      </p>
+
+      <p>
+        <span class="ratings">4.67</span>
+        <span class="reviews">6 reviews</span>
+      </p>
+
+    </div>
+
+    <div class="booking-details">
+
+      <div class="dates flex justify-between">
+        <div class="check-in">
+          <p class="title">Check-in</p>
+          <input type="date" id="check" name="Check-in" value="2022-01-08">
+        </div>
+        <div class="checkout">
+          <p class="title">Checkout</p>
+          <input type="date" id="check" name="Checkout" value="2022-06-08">
+        </div>
+      </div>
+
+      <div class="guests">
+        <p class="title">Guests</p>
+        <div class="menu flex justify-between align-center">
+          <p class="">1 guest</p>
+          <div class="">
+            <input id="menu" type="checkbox" name="menu">
+            <label for="menu">&#9660;</label>
+            <ul class="submenu">
+
+              <div class="guest-details flex justify-between align-center">
+                <div class="age">
+                  <p class="title">Adults</p>
+                  <p class="detail">Age 13+</p>
+                </div>
+                <div class="counts">
+                  <li class="numeric">1</li>
+                </div>
+              </div>
+
+              <div class="guest-details flex justify-between align-center">
+                <div class="age">
+                  <p class="title">Children</p>
+                  <p class="detail">Age 2-12</p>
+                </div>
+                <div class="counts">
+                  <li class="numeric">0</li>
+                </div>
+              </div>
+
+              <div class="guest-details flex justify-between align-center">
+                <div class="age">
+                  <p class="title">Infants</p>
+                  <p class="detail">Under 2</p>
+                </div>
+                <div class="counts">
+                  <li class="numeric">0</li>
+                </div>
+              </div>
+
+              <div class="guest-details flex justify-between align-center">
+                <div class="age">
+                  <p class="title">Pets</p>
+                  <p class="detail underline">Bringing a service animal</p>
+                </div>
+                <div class="counts">
+                  <li class="numeric">0</li>
+                </div>
+              </div>
+
+              <p class="detail">This place has a maximum of 2 guests, not including infants. Pets aren't allowed.</p>
+
+              <input id="close" type="checkbox" name="close">
+              <label class="underline bold" for="close">Close</label>
+
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <a href="#" class="btn reserve-btn mt-30">Reserve</a>
+    <p class="detail text-center mt-20">You won't be charged yet</p>
+    <div class="pricing">
+
+      <div class="flex justify-between mt-20">
+        <p class="underline">7,047 x 5 nights</p>
+        <p>₹35,235</p>
+      </div>
+
+      <div class="flex justify-between mt-20">
+        <p class="underline">Service fee</p>
+        <p>₹4,974</p>
+      </div>
+
+      <div class="flex justify-between mt-20">
+        <p class="bold">Total before taxes</p>
+        <p class="bold">₹40,209</p>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

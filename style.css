@@ -1,0 +1,230 @@
+/* font import url */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700&display=swap');
+
+/* Default CSS */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+body {
+  font-family: 'Mulish', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p {
+  color: #222;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/* Pre-defined Classes */
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.btn {
+  background-color: #da0965;
+  color: #fff;
+  border-radius: 8px;
+  width: 100%;
+  padding: 12px 30px;
+  text-align: center;
+  display: block;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: #b5155b;
+}
+
+.bold {
+  font-weight: bold
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.margin-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Sections */
+main {
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px;
+  margin-top: 40px;
+}
+
+.wrapper {
+  max-width: 480px;
+}
+
+.ratings:before {
+  content: ' \2605';
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.reviews {
+  color: #717171;
+}
+
+.reviews:before {
+  content: ' \2219';
+  color: #222;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.booking-details {
+  border: 1px solid #a1a1a1;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  letter-spacing: 0.4px;
+}
+
+div.check-in, div.checkout {
+  padding: 1rem 1rem 0.5rem;
+  min-width: 50%;
+}
+
+div.checkout {
+  border-left: 1px solid #a1a1a1;
+}
+
+.booking-details p.title {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.dates input#check {
+  border: 0
+}
+
+.guests {
+  border-top: 1px solid #a1a1a1;
+  padding: 1rem;
+  position: relative;
+  outline: 0px solid #000;
+}
+
+.guests:active {
+  outline: 2px solid #000;
+}
+
+input#menu, input#close, .submenu {
+  display: none;
+}
+
+.menu label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  text-align: right;
+}
+
+input#menu:checked~ul.submenu {
+  display: block;
+}
+
+input#close:checked~ul.submenu {
+  display: none;
+}
+
+.submenu {
+  min-width: 416px;
+  padding: 1rem;
+  border-radius: 4px !important;
+  box-shadow: rgb(0 0 0 / 15%) 0px 2px 6px, rgb(0 0 0 / 7%) 0px 0px 0px 1px;
+  position: absolute;
+  background-color: #fff;
+  right: 0;
+  margin-top: 10px;
+}
+
+div.age .title {
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 15px;
+}
+
+.guest-details {
+  padding-bottom: 1rem;
+}
+
+p.detail {
+  font-size: 14px;
+}
+
+.numeric {
+  list-style-type: none;
+}
+
+.numeric:before, .numeric:after {
+  font-size: 18px;
+  border: 1px solid #a1a1a1;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+}
+
+.numeric:before {
+  content: '\2212';
+  margin-right: 8px;
+}
+
+.numeric:after {
+  content: '\002B';
+  margin-left: 8px;
+}
+
+.pricing div:nth-child(2) {
+  border-bottom: 1px solid #a1a1a1;
+  padding-bottom: 1rem;
+}
