@@ -1,22 +1,46 @@
 /* font import url */
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700&display=swap');
 
+/* Custom Fonts */
+@font-face {
+  font-family: 'Cereal-Book';
+  src: url(Fonts/Airbnb_Cereal-Book.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cereal-Medium';
+  src: url(Fonts/Airbnb_Cereal-Medium.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cereal-Bold';
+  src: url(Fonts/Airbnb_Cereal-Bold.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Default CSS */
 * {
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
   line-height: 1.5;
+  font-family: 'Cereal-Book';
 }
 
 body {
-  font-family: 'Mulish', sans-serif;
+  font-family: 'Cereal-Book';
   font-weight: 400;
   font-style: normal;
 }
 
 p {
   color: #222;
+  font-size: 1rem;
   line-height: 1.5;
   letter-spacing: 0.4px;
 }
@@ -33,6 +57,10 @@ img {
 
 .right {
   float: right;
+}
+
+.block {
+  display: block;
 }
 
 .mt-30 {
@@ -62,12 +90,24 @@ img {
   transition: 0.5s;
 }
 
+.btn-gradient {
+  background-image: linear-gradient(to right, #d33751, #c62c65);
+}
+
+.btn-gradient:hover {
+  background-image: linear-gradient(to left, #d33751, #c62c65);
+}
+
 .btn:hover {
   background-color: #b5155b;
 }
 
 .bold {
   font-weight: bold
+}
+
+.font-600 {
+  font-weight: 600;
 }
 
 .flex {
@@ -88,6 +128,18 @@ img {
   margin-right: auto;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.gap-10 {
+  gap: 10px;
+}
+
 /* Sections */
 main {
   border: 1px solid rgb(221, 221, 221);
@@ -101,21 +153,28 @@ main {
   max-width: 480px;
 }
 
-.ratings:before {
-  content: ' \2605';
-  margin-right: 5px;
+.price {
+  font-size: 22px;
+}
+
+.fa-star {
+  font-size: 13px;
+}
+
+.ratings {
+  font-family: 'Cereal-Medium';
+}
+
+.ratings:after {
+  content: ' \2219';
+  color: #222;
   font-weight: bold;
 }
 
 .reviews {
   color: #717171;
-}
-
-.reviews:before {
-  content: ' \2219';
-  color: #222;
-  margin-right: 5px;
-  font-weight: bold;
+  font-size: 14px;
+  font-family: 'Cereal-Medium';
 }
 
 .booking-details {
@@ -123,6 +182,7 @@ main {
   border-radius: 8px;
   margin-top: 1.5rem;
   letter-spacing: 0.4px;
+  position: relative;
 }
 
 div.check-in, div.checkout {
@@ -134,25 +194,37 @@ div.checkout {
   border-left: 1px solid #a1a1a1;
 }
 
-.booking-details p.title {
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 500;
+.booking-details label.title {
+  font-size: 11px;
+  font-weight: 600;
 }
 
 .dates input#check {
-  border: 0
+  border: 0;
+  outline: 0;
+  font-family: 'Cereal-Medium';
+  font-size: 14px;
+}
+
+.dates input[type="date"]::-webkit-inner-spin-button, .dates input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
 }
 
 .guests {
+  width: 100%;
   border-top: 1px solid #a1a1a1;
   padding: 1rem;
-  position: relative;
   outline: 0px solid #000;
 }
 
-.guests:active {
-  outline: 2px solid #000;
+input#menu:checked~label.guests {
+  border: 2px solid #000;
+  border-radius: 8px;
+}
+
+input#menu:checked~label.guests .fa-chevron-down {
+  transform: rotate(180deg);
 }
 
 input#menu, input#close, .submenu {
@@ -174,6 +246,11 @@ input#close:checked~ul.submenu {
   display: none;
 }
 
+input#close~label {
+  margin: 15px 0 0;
+  text-align: right;
+}
+
 .submenu {
   min-width: 416px;
   padding: 1rem;
@@ -182,7 +259,6 @@ input#close:checked~ul.submenu {
   position: absolute;
   background-color: #fff;
   right: 0;
-  margin-top: 10px;
 }
 
 div.age .title {
@@ -195,6 +271,10 @@ div.age .title {
   padding-bottom: 1rem;
 }
 
+.guest-details:nth-child(4) {
+  padding-bottom: 1.5rem;
+}
+
 p.detail {
   font-size: 14px;
 }
@@ -203,25 +283,15 @@ p.detail {
   list-style-type: none;
 }
 
-.numeric:before, .numeric:after {
-  font-size: 18px;
+.numeric .icon {
   border: 1px solid #a1a1a1;
   border-radius: 50%;
-  width: 26px;
-  height: 26px;
-  display: inline-block;
-  text-align: center;
-  cursor: pointer;
+  padding: 10px;
+  font-size: 12px;
 }
 
-.numeric:before {
-  content: '\2212';
-  margin-right: 8px;
-}
-
-.numeric:after {
-  content: '\002B';
-  margin-left: 8px;
+.numeric .icon.fa-minus {
+  opacity: 0.4;
 }
 
 .pricing div:nth-child(2) {
